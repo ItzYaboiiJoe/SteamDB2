@@ -1,5 +1,7 @@
+import MainHome from "@/features/home/components/MainHome";
+
 const Home = () => {
-  return <div>Hello, Next.js!</div>;
+  return <MainHome />;
 };
 
 export default Home;
