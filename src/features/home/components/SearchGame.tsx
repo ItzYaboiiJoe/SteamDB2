@@ -13,7 +13,6 @@ const SearchGame = () => {
   const router = useRouter();
 
   const onGameClick = (appid: number) => {
-    console.log("App ID:", appid);
     router.push(`/app/${appid}`);
   };
 
