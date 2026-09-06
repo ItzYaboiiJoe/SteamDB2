@@ -4,13 +4,17 @@ import { Input } from "@/components/ui/input";
 import { useState } from "react";
 import { searchGames, SteamApp } from "../actions/searchGame";
 import { Button } from "@/components/ui/button";
+import { useRouter } from "next/navigation";
 
 const SearchGame = () => {
   const [search, setSearch] = useState("");
   const [games, setGames] = useState<SteamApp[]>([]);
 
+  const router = useRouter();
+
   const onGameClick = (appid: number) => {
     console.log("App ID:", appid);
+    router.push(`/app/${appid}`);
   };
 
   const handleSearch = async (value: string) => {
